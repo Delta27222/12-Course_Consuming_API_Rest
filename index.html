@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\index.css">
+    <title>API-Cats Page</title>
+</head>
+<body>
+
+    <header>
+        <h1  class=" header_text1">API-Cats Page</h1>
+        <p class=" header_text2">🐈 Consuming an api with JavaScript 🐈</p>
+    </header>
+
+    <main>
+        <section id="section_notification_error" >
+            <span id="error" ></span>
+            <button id="btn_cerrar_error">❌</button>
+        </section>
+        <section id="section_notification_success" >
+            <span id="success" ></span>
+            <button id="btn_cerrar_success"onclick="cerrar()">❌</button> 
+        </section>
+
+        <section id="uploadCats"> 
+            <div class="tittleSection_line">
+                <h1 class="h1_text">Upload Images section</h1>
+                <div class="line"></div>
+            </div>
+            <section class="formSection">
+
+                <form id="upload_cat" for="images" class="drop-container">
+                    <span class="drop-title">Drop files here</span>
+                    or
+                    <input type="file" id="images" accept="image/*" name="file" required>
+                    <button class="form_button" type="button" onclick="uploadCatPhoto()">Upload Img</button>
+                </form>
+
+
+            </section>
+        </section>
+        <section id="randomCats"> 
+            <div class="tittleSection_line">
+                <h1 class="h1_text">Random Cats section</h1>
+                <div class="line"></div>
+            </div>
+            <div id="div_message_img" onclick="create_new_img_container()">
+                <section class="section_notification_no_images" >
+                    <span id="no_img" >You don't have any image. Click here to add the first one 🐈</span>
+                </section>
+            </div>
+            <section id="img_section"class="img_section">
+            </section>
+            <section class="buttonsSection">
+                <div class="grid_buttons">
+                    <button type="button" id="primaryButton" class="myButtonRandom" onclick="load_Random_Cats()">Reload ramdom images</button>
+                    <button type="button" id="primaryButton" class="myButtonRandom" onclick="create_new_img_container()">Create new image</button>
+                </div>
+            </section>
+        </section>
+        <section id="favCats"> 
+            <div class="tittleSection_line">
+                <h1 class="h1_text">Favorites Images section</h1>
+                <div class="line"></div>
+            </div>
+            <div id="div_message">
+                <section class="section_notification_no_images" >
+                    <span id="no_img" >You don't have any favorite image.</span>
+                </section>
+            </div>
+            <section id="fav_img_section">
+                <!-- Aca, gracias al JS es donde se colocan las imagenes de los gatitos -->
+            </section>
+        </section>
+    </main>
+    <footer>
+        <h1>Made by Angel 😁, never stop learning ! 💙</h1>
+        <div id="p_and_img_div">
+            <a href="https://github.com/Delta27222" target="_blank">
+                <img href="https://github.com/Delta27222" src=".//github_icon.png" alt="github_icon" id="github_icon">
+            </a>
+            <p id="p_rights">All rights reserved -© 2022</p>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
